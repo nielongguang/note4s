@@ -1,0 +1,30 @@
+# 教程 https://docs.docker.com/get-started/
+# 安装docker
+sudo apt install docker.io
+sudo apt install docker-compose
+# 查看docker状态
+sudo service docker start
+#修改daemon配置
+
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://yjhpnam3.mirror.aliyuncs.com"],
+     "debug": true,
+     "tls": true,
+     "tlscert": "/var/docker/server.pem",
+     "tlskey": "/var/docker/serverkey.pem",
+     "hosts": ["tcp://127.0.0.1:2375"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+#显示docker 基本信息
+docker info
+
+#安装docker客户端
+#登陆 阿里云仓库
+sudo docker login --username=1808942574@qq.com registry.cn-hangzhou.aliyuncs.com
+ docker pull portainer
+

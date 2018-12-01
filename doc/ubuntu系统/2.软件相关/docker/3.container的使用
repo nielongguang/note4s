@@ -1,0 +1,15 @@
+#从远端拉去hello-world 镜像并执行
+docker run hello-world
+# 展示镜像列表
+docker image ls
+#展示所有容器 包括已经停止的
+docker container ls --all
+docker container ls -a
+#查看的容器id
+docker container ls -aq
+
+#-p 指定ip以及端口映射 -d表示后台运行 -m表示挂载硬盘 --name
+docker run --name  -p -d -m
+
+#通过容器id 停止容器运行
+docker container stop 1fa4ab2cf395

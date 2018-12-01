@@ -1,0 +1,9 @@
+#执行build镜像  并且以 /Dockerfile的使用为context目录
+docker build -t friendlyhello ./Dockerfile的使用
+#执行镜像 并以 -p 制定ip以及端口映射
+docker run -p 4000:80 friendlyhello
+#使用crul尝试访问
+curl http://localhost:4000
+
+#-d 背景运行 friendlyhello镜像
+docker run -d -p 4000:80 friendlyhello

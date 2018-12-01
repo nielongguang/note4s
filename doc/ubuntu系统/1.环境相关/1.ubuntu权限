@@ -1,0 +1,13 @@
+#开启su用户认证
+sudo passwd
+#关闭su用户认证
+sudo passwd -l root
+
+#增加权限 r  读写 w 写入 x 执行
+chmod u+r
+chmod u+w
+chmod u+x
+
+# 默认sudo 执行 apt换源
+echo shashouwudi123 | sudo ./apt换源脚本.sh
+

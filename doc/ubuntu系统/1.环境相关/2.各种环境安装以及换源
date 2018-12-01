@@ -1,0 +1,2 @@
+#备份原文件
+sudo mv /etc/apt/sources.list /etc/apt/source.list.bak

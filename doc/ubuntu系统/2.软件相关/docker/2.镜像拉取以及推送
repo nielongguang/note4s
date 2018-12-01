@@ -1,0 +1,14 @@
+#登陆阿里云 registry
+$ sudo docker login --username=1808942574@qq.com registry.cn-hangzhou.aliyuncs.com
+#给镜像打标签
+# docker tag image username/repository:tag
+# docker tag friendlyhello gordon/get-started:part2
+# 从Registry中拉取镜像
+$ sudo docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/nlg/yame:[镜像版本号]
+# 将镜像推送到Registry
+$ sudo docker push registry.cn-hangzhou.aliyuncs.com/nlg/yame:[镜像版本号]
+# sudo docker push username/repository:tag
+
+#显示镜像
+ docker image ls
+ docker images

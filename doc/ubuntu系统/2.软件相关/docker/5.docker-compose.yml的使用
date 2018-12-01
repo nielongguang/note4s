@@ -1,0 +1,24 @@
+#在我们使用docker stack deploy命令之前，我们首先运行
+docker swarm init
+#如果您没有运行docker swarm init，则会收到“此节点不是集群管理器”的错误。
+docker stack deploy -c docker-compose.yml getstartedlab
+#查看服务列表 如果命名为 getstartedlab的集群 其中的服务为web，则集群名为getstartedlab_web
+docker service ls
+# 查看正在运行的docker容器，会出现5个同名容器，但是id不同
+docker container ls
+#使用curl尝试访问
+curl http://localhost:4000
+#关闭stack getstartedlab
+docker stack rm getstartedlab
+#关闭集群
+docker swarm leave --force
+
+
+docker stack ls                                            # List stacks or apps
+docker stack deploy -c <composefile> <appname>  # Run the specified Compose file
+docker service ls                 # List running services associated with an app
+docker service ps <service>                  # List tasks associated with an app
+docker inspect <task or container>                   # Inspect task or container
+docker container ls -q                                      # List container IDs
+docker stack rm <appname>                             # Tear down an application
+docker swarm leave --force      # Take down a single node swarm from the manager
