@@ -1,0 +1,4 @@
+#移除系统自带字体
+ sudo apt-get remove fonts-arphic-ukai fonts-arphic-uming
+#进入 /etc/apt 目录
+#选择服务器  选择中国  /阿里云服务

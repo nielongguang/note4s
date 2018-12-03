@@ -1,4 +1,0 @@
-#添加第二个远程地址时使用以下命令：
-git remote set-url --add origin git@github.com:morethink/programming.git
-#查看远程地址 查看远程分支
-git remote -v
