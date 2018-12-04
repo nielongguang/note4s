@@ -9,17 +9,14 @@ sudo service docker start
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["https://yjhpnam3.mirror.aliyuncs.com"],
-     "debug": true,
-     "tls": true,
-     "tlscert": "/var/docker/server.pem",
-     "tlskey": "/var/docker/serverkey.pem",
-     "hosts": ["tcp://127.0.0.1:2375"]
+  "registry-mirrors": ["https://yjhpnam3.mirror.aliyuncs.com"]
 }
 EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 
+
+ #  "hosts": ["tcp://127.0.0.1:2375"]
 #显示docker 基本信息
 docker info
 
