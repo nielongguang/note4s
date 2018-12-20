@@ -1,0 +1,36 @@
+经常会遇到下面三个问题:
+Q1:这是谁的代码?
+Q2:这是谁的项目?
+Q3:这是谁的包?
+
+我建议,
+A1,新创建的java源码,必须署名@author,使用中文名全拼
+/**
+ * @author: liguozheng
+ * @date: 2018-08-11
+ */
+public interface ApiConst {}
+
+A2,dubbo服务谁在维护,提供owner,中文名全拼,这一点运维可能有异议
+#应用名称
+spring.dubbo.application.name=${spring.application.name}
+#应用负责人
+spring.dubbo.application.owner=liguozheng
+
+A3,pom提供源码url,和developers
+
+   <packaging>jar</packaging>
+    <url>https://github.com/teaey/spring-boot-starter-dubbo</url>
+    <name>spring-boot-starter-dubbo</name>
+
+    <developers>
+        <developer>
+            <name>teaey(Xiaofei.Wu)</name>
+            <email>masfay@163.com</email>
+            <url>teaey.github.com</url>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+    <dependencies>
+        <dependency>
+  ...
